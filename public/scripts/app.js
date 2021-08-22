@@ -45,7 +45,6 @@ function fillPosts(list) {
         divImg.classList.add("card-img");
         const img = document.createElement("img");
         img.setAttribute("src", images[i]);
-        //img.setAttribute("alt", list[i].title)
         divImg.appendChild(img);
 
         const divBody = document.createElement("div");
