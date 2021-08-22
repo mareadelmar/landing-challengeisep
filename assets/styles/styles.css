@@ -1,6 +1,7 @@
 html {
     --color-accent: #00c4cf;
     --color-principal: #ffc400;
+    --color-darkprincipal: #eaae00;
     --color-white: #ffffff;
 }
 
@@ -21,16 +22,39 @@ body {
     min-height: 95vh;
 }
 
+.w80 {
+    width: 80%;
+}
+
+.text-center {
+    text-align: center;
+}
+
 .text-white {
     color: var(--color-white);
 }
 
+.text-space {
+    padding: 8px 0;
+}
+
 .section-title {
-    font-size: 56px;
+    font-size: 64px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.medium-title {
+    font-size: 32px;
+}
+
+.card-title {
+    font-size: 24px;
     font-weight: 600;
 }
 
 .section-main-text {
+    color: var(--color-white);
     font-size: 24px;
 }
 
@@ -58,15 +82,19 @@ body {
     margin-top: 24px;
 }
 
+.mbottom-large {
+    margin-bottom: 128px;
+}
+
 .btn {
     box-sizing: border-box;
-    padding: 1em;
+    padding: 16px;
     border-radius: 4px;
-    width: 10em;
-    margin-right: 1.5em;
+    width: 160px;
+    margin-right: 24px;
     cursor: pointer;
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 18px;
 }
 
 .btn:hover {
@@ -83,38 +111,52 @@ body {
     border: 2px solid var(--color-accent);
 }
 
+.link {
+    cursor: pointer;
+}
+
 /* HEADER */
 
 .header {
     height: 12vh;
+    background: var(--color-darkprincipal);
 }
 
 .header-content {
-    width: 80%;
     justify-content: space-between;
 }
 
 .nav-item {
-    padding: 1em;
+    padding: 16px;
     list-style: none;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .nav-item a {
     text-decoration: none;
+    color: white;
+}
+
+.nav-item a:hover {
+    color: #dddddd;
 }
 
 .search-bar {
     justify-content: flex-end;
+    box-shadow: 3px 3px 16px rgba(0.4, 0, 0, 0.4);
 }
 
 .search-input {
     line-height: 3;
+    padding-left: 8px;
+    background-color: var(--color-principal);
+    border: 0;
 }
 
 .search-btn {
     border: 0;
     background-color: var(--color-accent);
-    *color: var(--color-white);
 }
 
 .iconify-search {
@@ -130,31 +172,31 @@ body {
     background-color: var(--color-principal);
 }
 
-.hero-content {
-    width: 80%;
-}
-
 .hero-left {
     height: 100%;
-    width: 60%;
+    width: 65%;
     flex-direction: column;
 }
 
 .hero-left h1,
 .hero-left p {
-    width: 70%;
+    width: 80%;
 }
 
 .hero-right {
     height: 100%;
-    width: 38%;
+    width: 32%;
+}
+
+.hero-img {
+    width: 385px;
+}
+
+.btn-container {
+    margin-top: 40px;
 }
 
 /* VIDEO SECTION */
-
-.sec-video-content {
-    width: 80%;
-}
 
 .sec-video-left,
 .sec-video-right {
@@ -163,27 +205,29 @@ body {
     flex-direction: column;
 }
 
-/* SERVICES SECTION */
-
-.services-content {
-    width: 80%;
-    text-align: center;
+.sec-video-right {
+    *position: relative;
 }
+
+.video-container {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/* SERVICES SECTION */
 
 .services-cards {
     justify-content: space-around;
 }
 
-.services-cards div {
-    *margin: 0 2em;
+.services-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border: 4px solid var(--color-white);
 }
 
 /* STAFF SECTION */
-
-.staff-content {
-    width: 80%;
-    text-align: center;
-}
 
 .staff-cards {
     justify-content: space-around;
@@ -195,6 +239,10 @@ body {
     object-fit: cover;
 }
 
+.staff-cards a {
+    text-decoration: none;
+}
+
 .staff-icons svg {
     margin: 0 0.5em;
     background-color: var(--color-principal);
@@ -202,29 +250,63 @@ body {
     height: 32px;
     border-radius: 50%;
     color: var(--color-white);
+    padding: 4px;
 }
 
 /* SEPARATOR */
+
 .separator {
     height: 50vh;
-    background-color: var(--color-principal);
+    width: 100%;
+    *background-color: var(--color-principal);
 }
 
 .separator-content {
     height: 100%;
-    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+    background: url(https://www.chartercollege.edu/sites/default/files/iStock-851393466.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.separator-content::after {
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: rgba(255, 196, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.separator-icons {
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    position: absolute;
+    *justify-content: space-around;
+}
+
+.separator-icons div {
+    color: var(--color-white);
+    margin: 0 128px;
+}
+
+.separator-icons svg {
+    font-size: 128px;
+}
+
+.separator-icons div h5 {
+    font-weight: 700;
 }
 
 /* POSTS SECTION */
 
-.posts-content {
-    width: 80%;
-    text-align: center;
-    margin-bottom: 128px;
-}
-
 .card-content {
-    margin: 0 2em;
+    margin: 0 32px;
 }
 
 .card-img {
@@ -247,21 +329,14 @@ body {
     border: 0.5px solid rgba(128, 128, 128, 0.5);
 }
 
-.card-title {
-    font-size: 24px;
-    cursor: pointer;
-}
-
 .card-date {
     color: var(--color-accent);
-    font-weight: bolder;
-    padding: 0 0 0.5em 0.5em;
+    font-weight: 700;
+    padding: 0 0 8px 8px;
 }
 
 .card-text {
-    padding: 0.5em 0 0.5em 0.5em;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 8px 0 8px 8px;
 }
 
 /* FOOTER */
@@ -274,4 +349,92 @@ body {
 .footer-left,
 .footer-right {
     width: 50%;
+}
+
+.footer-list {
+    margin: 0px 0 0 128px;
+}
+
+.footer-list ul {
+    padding: 0;
+}
+
+.footer-list ul li {
+    list-style: none;
+    padding: 4px 0;
+}
+
+.footer-right {
+    text-align: right;
+    margin-right: 128px;
+}
+
+.footer-icons svg {
+    margin: 0 4px;
+    background-color: var(--color-white);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: black;
+    padding: 4px;
+}
+
+.footer-icons a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .hide {
+        display: none;
+    }
+
+    .mq-column {
+        flex-direction: column;
+    }
+
+    .w80 {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 48px;
+    }
+
+    .hero-left,
+    .sec-video-left {
+        width: 100%;
+        padding: 24px 0 0 24px;
+    }
+
+    .services-cards div,
+    .staff-cards div {
+        margin: 32px 0;
+    }
+
+    .posts-cards {
+        justify-content: center;
+    }
+
+    .card-content {
+        margin: 32px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%;
+    }
+
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 64px;
+    }
 }

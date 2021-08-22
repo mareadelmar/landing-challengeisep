@@ -4,11 +4,31 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Mar Ortega" />
+        <meta name="robots" content="index follow" />
+
+        <!-- facebook -->
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:url" content="" />
+
+        <!-- twitter -->
+        <meta property="twitter:title" content="" />
+        <meta property="twitter:description" content="" />
+        <meta property="twitter:type" content="" />
+        <meta property="twitter:image" content="" />
+        <meta property="twitter:url" content="" />
+
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
             rel="stylesheet"
         />
         <link
@@ -20,12 +40,12 @@
     </head>
     <body>
         <header class="header flex justify-center">
-            <div class="header-content flex align-center">
+            <div class="header-content flex align-center w80">
                 <div class="flex align-center">
                     <img src="" alt="" />
                     <h1>company logo</h1>
                 </div>
-                <nav>
+                <nav class="hide">
                     <ul class="flex">
                         <li class="nav-item"><a href="#">Home</a></li>
                         <li class="nav-item"><a href="#">About</a></li>
@@ -33,9 +53,9 @@
                         <li class="nav-item"><a href="#">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="search-bar flex">
+                <div class="search-bar flex hide">
                     <input type="text" class="search-input" />
-                    <button class="search-btn">
+                    <button class="search-btn flex align-center">
                         <span
                             class="iconify iconify-search"
                             data-icon="ph:magnifying-glass-light"
@@ -45,7 +65,7 @@
             </div>
         </header>
         <section class="hero container flex justify-center">
-            <div class="hero-content">
+            <div class="flex w80">
                 <div class="hero-left flex justify-center">
                     <h1 class="section-title text-white">
                         First i wanted to be a veterinarian
@@ -56,7 +76,7 @@
                         ut, reiciendis ad error reprehenderit rem. Distinctio
                         vel sequi non suscipit, quasi eligendi eaque.
                     </p>
-                    <div class="mtop-small">
+                    <div class="btn-container">
                         <button class="btn btn-primary text-white">
                             Contact us
                         </button>
@@ -65,12 +85,18 @@
                         </button>
                     </div>
                 </div>
-                <div class="hero-right"></div>
+                <div class="hero-right mtop-medium hide">
+                    <img
+                        src="assets/statics/dog-hero.png"
+                        alt=""
+                        class="hero-img"
+                    />
+                </div>
             </div>
         </section>
 
         <section class="sec-video container flex justify-center">
-            <div class="sec-video-content">
+            <div class="w80 flex mbottom-large mtop-large">
                 <div class="sec-video-left flex justify-center">
                     <h3 class="section-title">
                         As a veterinarian and lovers of animals
@@ -81,16 +107,40 @@
                         ut, reiciendis ad error reprehenderit rem. Distinctio
                         vel sequi non suscipit, quasi eligendi eaque.
                     </p>
-                    <button class="btn btn-secondary mtop-small text-white">
-                        Our service
-                    </button>
+                    <div class="btn-container">
+                        <button class="btn btn-secondary text-white">
+                            Our service
+                        </button>
+                    </div>
                 </div>
-                <div class="sec-video-right"></div>
+                <div class="sec-video-right flex justify-center hide">
+                    <div class="video-container flex">
+                        <!-- <iframe
+                            width="480"
+                            height="357"
+                            src="https://www.youtube.com/embed/UwipvPhilHc"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe> -->
+
+                        <!-- <video
+                            src="https://youtu.be/UwipvPhilHc"
+                            width="480"
+                            height="357"
+                            muted
+                            controls
+                        >
+                            <embed src="https://youtu.be/UwipvPhilHc" type="" />
+                        </video> -->
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="services container flex justify-center">
-            <div class="services-content mtop-large">
+            <div class="mtop-large w80 text-center mbottom-large">
                 <div>
                     <h3 class="section-title text-white">Title Here</h3>
                     <p class="section-main-text text-white mtop-small">
@@ -98,27 +148,29 @@
                         consectetur adipisicing elit.
                     </p>
                 </div>
-                <div class="services-cards flex text-white">
+                <div
+                    class="services-cards flex text-white mtop-medium mq-column"
+                >
                     <div>
-                        <img src="" alt="" />
-                        <h5>Veterinarian</h5>
+                        <img src="" alt="" class="services-img" />
+                        <h5 class="card-title">Veterinarian</h5>
                     </div>
                     <div>
-                        <img src="" alt="" />
-                        <h5>Vaccinations Care</h5>
+                        <img src="" alt="" class="services-img" />
+                        <h5 class="card-title">Vaccinations Care</h5>
                     </div>
                     <div>
-                        <img src="" alt="" />
-                        <h5>Dental Care</h5>
+                        <img src="" alt="" class="services-img" />
+                        <h5 class="card-title">Dental Care</h5>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="staff container flex justify-center">
-            <div class="staff-content mtop-large">
+            <div class="mtop-large w80 text-center mbottom-large">
                 <h3 class="section-title">Our team</h3>
-                <div class="staff-cards flex mtop-medium">
+                <div class="staff-cards flex mtop-medium mq-column">
                     <div>
                         <img src="" alt="" class="staff-img" />
                         <h5 class="card-title mtop-small">
@@ -129,19 +181,19 @@
                             <a href=""
                                 ><span
                                     class="iconify"
-                                    data-icon="fa-brands:instagram"
+                                    data-icon="iconoir:instagram"
                                 ></span
                             ></a>
                             <a href="">
                                 <span
                                     class="iconify"
-                                    data-icon="fa-brands:facebook-f"
+                                    data-icon="iconoir:facebook"
                                 ></span>
                             </a>
                             <a href="">
                                 <span
                                     class="iconify"
-                                    data-icon="fa-brands:twitter"
+                                    data-icon="iconoir:twitter"
                                 ></span>
                             </a>
                             <a href="">
@@ -163,19 +215,19 @@
                                 <a href=""
                                     ><span
                                         class="iconify"
-                                        data-icon="fa-brands:instagram"
+                                        data-icon="iconoir:instagram"
                                     ></span
                                 ></a>
                                 <a href="">
                                     <span
                                         class="iconify"
-                                        data-icon="fa-brands:facebook-f"
+                                        data-icon="iconoir:facebook"
                                     ></span>
                                 </a>
                                 <a href="">
                                     <span
                                         class="iconify"
-                                        data-icon="fa-brands:twitter"
+                                        data-icon="iconoir:twitter"
                                     ></span>
                                 </a>
                                 <a href="">
@@ -198,19 +250,19 @@
                                 <a href=""
                                     ><span
                                         class="iconify"
-                                        data-icon="fa-brands:instagram"
+                                        data-icon="iconoir:instagram"
                                     ></span
                                 ></a>
                                 <a href="">
                                     <span
                                         class="iconify"
-                                        data-icon="fa-brands:facebook-f"
+                                        data-icon="iconoir:facebook"
                                     ></span>
                                 </a>
                                 <a href="">
                                     <span
                                         class="iconify"
-                                        data-icon="fa-brands:twitter"
+                                        data-icon="iconoir:twitter"
                                     ></span>
                                 </a>
                                 <a href="">
@@ -226,16 +278,39 @@
             </div>
         </section>
 
-        <section class="separator">
-            <div class="separator-content flex align-center">
-                <div>holis</div>
-                <div>holis</div>
-                <div>holis</div>
+        <section class="separator hide">
+            <div class="separator-content">
+                <div class="separator-icons flex align-center justify-center">
+                    <div>
+                        <span
+                            class="iconify"
+                            data-icon="healthicons:defibrilator-outline"
+                        ></span>
+                        <p class="section-main-text">+34793</p>
+                        <h5 class="card-title">Happy Clients</h5>
+                    </div>
+                    <div>
+                        <span
+                            class="iconify"
+                            data-icon="healthicons:syringe-outline"
+                        ></span>
+                        <p class="section-main-text">+4382</p>
+                        <h5 class="card-title">Departament</h5>
+                    </div>
+                    <div>
+                        <span
+                            class="iconify"
+                            data-icon="healthicons:stethoscope-outline"
+                        ></span>
+                        <p class="section-main-text">+54762</p>
+                        <h5 class="card-title">Vaccinations</h5>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="posts container flex justify-center">
-            <div class="posts-content mtop-large">
+            <div class="mtop-large w80 text-center mbottom-large">
                 <div>
                     <h3 class="section-title">Recent Posts</h3>
                     <p class="section-main-text mtop-small">
@@ -243,81 +318,73 @@
                         consectetur adipisicing elit.
                     </p>
                 </div>
-                <div class="posts-cards flex justify-center mtop-medium">
-                    <!-- <div class="card-content">
-                        <div class="card-img">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-text card-title">
-                                As a veterinarian and lovers of animals
-                            </h5>
-                            <p class="card-date">AUGUST 5, 2021</p>
-                            <p class="card-text">
-                                Lorem ipsum dolor ad error reprehenderit rem,
-                                sit amet consectetur adipisicing elit.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-img">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-text card-title">
-                                As a veterinarian and lovers of animals
-                            </h5>
-                            <p class="card-date">JULY 22, 2021</p>
-                            <p class="card-text">
-                                Lorem ipsum dolor ad error reprehenderit rem,
-                                sit amet consectetur adipisicing elit.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <div class="card-img">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-text card-title">
-                                As a veterinarian and lovers of animals
-                            </h5>
-                            <p class="card-date">JULY 08, 2021</p>
-                            <p class="card-text">
-                                Lorem ipsum dolor ad error reprehenderit rem,
-                                sit amet consectetur adipisicing elit.
-                            </p>
-                        </div>
-                    </div> -->
-                </div>
+                <div
+                    class="
+                        posts-cards
+                        flex
+                        justify-center
+                        mtop-medium mtop-medium
+                        mq-column
+                    "
+                ></div>
             </div>
         </section>
 
-        <footer class="footer flex">
-            <div class="footer footer-left flex">
-                <div class="">
-                    <h5>About</h5>
-                    <ul>
-                        <li>History</li>
-                        <li>Our Team</li>
-                        <li>Brand Guidelines</li>
-                        <li>Terms & Condition</li>
-                        <li>Privacy Policy</li>
-                    </ul>
+        <footer class="footer flex justify-center">
+            <div class="flex w80 mbottom-large mtop-large mq-column">
+                <div class="footer-left flex">
+                    <div class="footer-list">
+                        <h5 class="card-title text-space">About</h5>
+                        <ul class="text-space">
+                            <li>History</li>
+                            <li>Our Team</li>
+                            <li>Brand Guidelines</li>
+                            <li>Terms & Condition</li>
+                            <li>Privacy Policy</li>
+                        </ul>
+                    </div>
+                    <div class="footer-list">
+                        <h5 class="card-title text-space">Services</h5>
+                        <ul>
+                            <li>How to Order</li>
+                            <li>Our Product</li>
+                            <li>Order Status</li>
+                            <li>Promo</li>
+                            <li>Payment Method</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <h5>Services</h5>
-                    <ul>
-                        <li>How to Order</li>
-                        <li>Our Product</li>
-                        <li>Order Status</li>
-                        <li>Promo</li>
-                        <li>Payment Method</li>
-                    </ul>
+                <div class="footer-right">
+                    <h5 class="card-title text-space">Title here</h5>
+                    <p>Lorem ipsum dolor ad error reprehenderit rem</p>
+
+                    <div class="footer-icons mtop-small">
+                        <a href=""
+                            ><span
+                                class="iconify"
+                                data-icon="iconoir:instagram"
+                            ></span
+                        ></a>
+                        <a href="">
+                            <span
+                                class="iconify"
+                                data-icon="iconoir:facebook"
+                            ></span>
+                        </a>
+                        <a href="">
+                            <span
+                                class="iconify"
+                                data-icon="iconoir:twitter"
+                            ></span>
+                        </a>
+                        <a href="">
+                            <span
+                                class="iconify"
+                                data-icon="fa-brands:whatsapp"
+                            ></span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="footer footer-right">
-                <h5>Title here</h5>
             </div>
         </footer>
         <script type="module" src="scripts/app.js"></script>

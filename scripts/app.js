@@ -1,6 +1,7 @@
 import { getPostsData } from "./service.js";
 import { getPhotos } from "./service.js";
 
+// variables
 const dates = ["AUGUST 5, 2021", "JULY 22, 2021", "JULY 08, 2021"];
 const images = [
     "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.fvkmrGHqfib51AW6t-YJ8gHaD4%26pid%3DApi&f=1",
@@ -10,18 +11,22 @@ const images = [
 const cardTitleLimit = 20;
 const cardTextLimit = 120;
 
+// selectores
 const postsCards = document.querySelector(".posts-cards");
 const staffImg = document.querySelectorAll(".staff-img");
+const servicesImg = document.querySelectorAll(".services-img");
 
 init();
 function init() {
     getPostsData().then((res) => fillPosts(res));
-    getPhotos().then((res) => fillStaff(res));
+    getPhotos().then((res) => {
+        fillStaff(res);
+        fillServices(res);
+    });
 }
 
 function fillStaff(staff) {
-    console.log(staff[0].url);
-    console.log(staffImg[0]);
+    console.log(staff);
 
     for (let i = 0; i < staffImg.length; i++) {
         console.log(i);
@@ -29,10 +34,14 @@ function fillStaff(staff) {
     }
 }
 
+function fillServices(services) {
+    for (let i = 0; i < servicesImg.length; i++) {
+        servicesImg[i].setAttribute("src", services[i].url);
+    }
+}
+
 function fillPosts(list) {
     for (let i = 0; i < 3; i++) {
-        //console.log(list[i]);
-
         const divContainer = document.createElement("div");
         divContainer.classList.add("card-content");
 
@@ -49,7 +58,7 @@ function fillPosts(list) {
         const title = document.createElement("h5");
         const date = document.createElement("p");
         const text = document.createElement("p");
-        title.classList.add("card-text", "card-title");
+        title.classList.add("card-text", "card-title", "link");
         date.classList.add("card-date");
         text.classList.add("card-text");
         title.textContent = `${list[i].title.substr(0, cardTitleLimit)}...`;

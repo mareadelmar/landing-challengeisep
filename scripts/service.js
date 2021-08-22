@@ -13,7 +13,7 @@ export const getPhotos = () => {
         .then((res) => res.json())
         .then((data) => {
             console.log(data);
-            const photos = data.slice(0, 5);
+            const photos = data.slice(0, 6);
             return photos;
         });
 };
